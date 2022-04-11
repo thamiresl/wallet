@@ -1,5 +1,6 @@
 const initialState = {
   currencies: [],
+  expenses: [],
 };
 
 function wallet(state = initialState, action) {
@@ -9,6 +10,11 @@ function wallet(state = initialState, action) {
       ...state,
       currencies: Object.keys(action.currencies)
         .filter((currency) => currency !== 'USDT'),
+    };
+  case 'EXPENSES_ACTION':
+    return {
+      ...state,
+      expenses: [...state.expenses, action.expenses],
     };
   default:
     return state;
