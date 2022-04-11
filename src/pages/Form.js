@@ -32,7 +32,7 @@ class Form extends React.Component {
               name="currencyInput"
               id="currencyInput"
             >
-{/*               <option>{ currency }</option> */}
+              <option>0</option>
             </select>
           </label>
 
